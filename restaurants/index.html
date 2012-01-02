@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Review</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/restaurant.js" ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form onsubmit="return checkForm()">
+          <div class="span12">
+            <h1>Restaurant Review</h1>
+          </div>
+          <div class="span6">
+            <legend>Restaurant details</legend>
+            <label for="restaurantName">Name</label>
+            <input type="text" name="restaurantName" id="restaurantName" />
+
+            <label for="restaurantCity">City</label>
+            <input type="text" name="restaurantCity" id="restaurantCity" />
+
+            <label for="restaurantState">State</label>
+            <select name="restaurantState" id="restaurantState">
+              <option>New South Wales</option>
+              <option>Victoria</option>
+              <option>Queensland</option>
+              <option>Australian Capital Territory</option>
+              <option>Western Australia</option>
+              <option>South Australia</option>
+              <option>Northern Territory</option>
+              <option>Tasmania</option>
+            </select>
+
+            <label for="restaurantPostcode">Postcode</label>
+            <input type="text" name="restaurantPostcode" id="restaurantPostcode" class="input-small" />
+
+            <legend>Cusine</legend>
+
+            <label>Type</label>
+            <select name="cuisineType" id="cuisineType" >
+              <option>Select Cuisine</option>
+              <option>Australian</option>
+              <option>Thai</option>
+              <option>Greek</option>
+              <option>Mexican</option>
+              <option>Japanese</option>
+              <option>Italian</option>
+              <option>Chinese</option>
+              <option>Lebanese</option>
+              <option>German</option>
+              <option>French</option>
+              <option>Other</option>
+            </select>
+
+            <label>Cost of typical main</label>
+            <div class="input-prepend">
+              <span class="add-on">$</span>
+              <input type="text" name="cuisineCost" id="cuisineCost" />
+            </div>
+          </div>
+
+          <div class="span6">
+            <legend>Ratings <small>out of 10</small></legend>
+            <div class="row">
+              <div class="span3">
+                <label>Food</label>
+                <input type="text" name="foodRating" id="foodRating" class="input-mini" /> 
+
+                <label>Ambience</label>
+                <input type="text" name="ambianceRating" id="ambianceRating" class="input-mini" />
+              </div>
+              <div class="span3">
+                <label>Service</label>
+                <input type="text" name="serviceRating" id="serviceRating" class="input-mini" /> 
+
+                <label>Value</label>
+                <input type="text" name="valueRating" id="valueRating" class="input-mini" /> 
+              </div>
+            </div>
+
+            <legend>Review</legend>
+
+            <label>Date last visited</label>
+            <input type="date" name="lastVisitDate" id="lastVisitDate" class="span6" />
+            <span class="help-block">Date must be in the format of YYYY-MM-DD</span>
+
+            <label>Review</label>
+            <textarea class="span6" rows="8" name="review" id="review"></textarea>
+          </div>
+
+          <div class="span12 form-actions">
+            <input type="submit" class="btn btn-primary" value="Submit Review" />
+            <button type="button" class="btn" onclick="reset()">Clear Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

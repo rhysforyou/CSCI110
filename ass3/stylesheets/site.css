@@ -1,0 +1,65 @@
+body {
+  width: 640px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  
+  font-family: Palatino, Cambria, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body > header {
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  
+  background: #d75f00;
+  color: white;
+}
+
+header .logo {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+header h1 {
+  display: inline;
+  line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+  font-family: Avenir, Calibri, sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+legend {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input, textarea, select {
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 400px;
+}
+
+ul.students {
+  columns: 5;
+  -webkit-columns: 5; /* Safari and Chrome */
+  -moz-columns: 5; /* Firefox */
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+/* 
+    Document   : main
+    Created on : Aug 20, 2012, 10:31:18 AM
+    Author     : rpowell
+    Description:
+        Main stylesheet for this assignment.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    font-family: 'Palatino', 'Georgia', serif;
+    font-size: 16px;
+    line-height: 24px;
+    width: 640px;
+    margin: auto;
+    padding-top: 20px;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Avenir', 'Helvetica', 'Calibri', 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}

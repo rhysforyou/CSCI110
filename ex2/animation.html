@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Drunken Java Lecturer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="./css/animation.css"/>
+        <script type="text/javascript" src="./javascript/animation.js"></script>
+    </head>
+    <body>
+        <div id="stage">
+            <img id="bkgd" src="./images/background.jpg" />
+            <img id="duke" src="./images/T1.gif"/>
+            
+        </div>
+        <div id="controls">
+            <h1> The Drunken Java Lecturer </h1>
+            <fieldset>
+                <legend>Controls</legend>
+                <dl><dt> Number of drinks </dt>
+                    <dd><select id="drinks">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select></dd>
+                        <dt>Animation</dt>
+                <dd>
+                    <input type="button" id="startstop" value="Start" onclick="doAnimate()" />
+                </dd>
+                </dl>       
+            </fieldset>
+        </div>
+        
+    </body>
+</html>

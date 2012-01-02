@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript" src="javascript/FormChecking.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Form Checking Demo</h1>
+      <p>Help sponsor a zoo animal!</p>
+    </header>
+    
+    <form onsubmit="return confirmSubmit()">
+      <fieldset>
+        <legend>Choice of Animal</legend>
+
+        <select multiple="multiple" name="animals" id="animals">
+          <option value="1">Tiger $2000</option>
+          <option value="2">Elephant $1900</option>
+          <option value="3">Chimpanzee $1800</option>
+          <option value="4">Warthog $1050</option>
+          <option value="5">Lemur $180</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Card Type</legend>
+
+        <input type="radio" name="cardType" id="mastercard" /> Mastercard <br/>
+        <input type="radio" name="cardType" id="visa" /> Visa
+      </fieldset>
+
+      <fieldset>
+        <legend>Card Number</legend>
+
+        Card Number <input type="text" name="cardNum" id="cardNum" size="16" />
+      </fieldset>
+
+      <input type="submit" value="Sponsor" />
+    </form>
+  </body>
+</html>

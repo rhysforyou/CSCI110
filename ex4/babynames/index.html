@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find a Baby Name</title>
+  <style>
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  form {
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  form legend {
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 48px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  span.form-header {
+    display: block;
+    margin-top: 24px;
+    font-weight: bold;
+  }
+  
+  hr {
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  </style>
+</head>
+<body>
+  <form method="post" action="./searchBabyNames.php">
+    <legend>Find a baby name</legend>
+    
+    <span class="form-header">Gender</span>    
+    <input type="radio" name="gender" value="boy" id="gender-boy">
+    <label for="gender-boy">Boy</label>
+    <br/>
+    <input type="radio" name="gender" value="girl" id="gender-girl">
+    <label for="gender-girl">Girl</label>
+    <br/>
+    
+    <span class="form-header">First Letter</span>
+    <select name="letter">
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+      <option>D</option>
+      <option>E</option>
+      <option>F</option>
+      <option>G</option>
+      <option>H</option>
+      <option>I</option>
+      <option>J</option>
+      <option>K</option>
+      <option>L</option>
+      <option>M</option>
+      <option>N</option>
+      <option>O</option>
+      <option>P</option>
+      <option>Q</option>
+      <option>R</option>
+      <option>S</option>
+      <option>T</option>
+      <option>U</option>
+      <option>V</option>
+      <option>W</option>
+      <option>X</option>
+      <option>Y</option>
+      <option>Z</option>
+    </select>
+    
+    <hr />
+    
+    <input type="submit" value="Search">
+  </form>
+</body>
+</html>

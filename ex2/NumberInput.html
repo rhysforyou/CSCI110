@@ -1,0 +1,50 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Little Javascript Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script type="text/javascript">
+            function checkInput(inputField) {
+                input = inputField.value;
+                if (input.length == 0) {
+                    alert("No data input, nothing to check.");
+                    return;
+                }
+                
+                for(i = 0; i < input.length; i++) {
+                    ch = input.charAt(i);
+                    if((ch < '0') || (ch > '9')) {
+                        alert("Invalid input data.");
+                        return;
+                    }
+                }
+                
+                if ((input < 1) || (input > 100)) {
+                    alert("The value entered was outside the required range.")
+                    return;
+                }
+                
+                alert("The value entered was accepted!");
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Using Javascript to Check Input</h1>
+        
+            <p>Values entered in the text input field are checked when the button is pressed; an alert dialog reports whether the value was acceptable or not.</p>
+        </header>
+        
+        <form name="placeholderForm">
+            <p>Enter a positive non-zero integer less than 100:</p>
+            <input type="text" name="number" value="0" size="8" />
+            <br />
+            <input type="button" value="Check input" onclick="checkInput(number)" />
+        </form>
+    </body>
+</html>

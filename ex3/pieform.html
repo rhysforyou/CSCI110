@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pie Chart Form</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script type="text/javascript" src="checksubmit.js"></script>
+    <style type="text/css">
+      body { padding-top: 20px; }
+      h3, h4 { font-weight: normal; }
+      textarea { font-family: 'Monaco', 'Consolas', monospace; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h1>Pie Cart Data Entry</h1>
+          <hr />
+
+          <form id="pieForm" method="post" action="./piegraph.php" onsubmit="checkData">
+            <label for="title">Title for chart</label>
+            <input type="text" id="title" name="title" class="span6" />
+
+            <div class="row">
+              <div class="span3">
+                <h4>Categories</h4>
+              </div>
+              <div class="span3">
+                <h4>Values</h4>
+              </div>
+            </div>
+
+            <textarea rows="10" id="categories" name="categories"></textarea>
+            <textarea rows="10" id="values" name="values"></textarea>
+
+            <br />
+
+            <input type="text" name="category" id="category" placeholder="Category"></input>
+            <input type="text" name="value" id="value" placeholder="Value"></input>
+
+            <br />
+
+            <input class="btn" type="button" value="Add Item" onclick="doAdd()"></input>
+            <input class="btn" type="button" value="Reset" onclick="doReset()"></input>
+            <input type="submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

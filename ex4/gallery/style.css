@@ -1,0 +1,36 @@
+body {
+  width: 640px;
+  margin: auto;
+
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+form label {
+  display: inline-block;
+  width: 90px;
+  margin-right: 10px;
+  text-align: right;
+  vertical-align: top;
+}
+
+form input {
+  display: inline-block;
+}
+
+form input[type=submit]
+{
+  margin-left: 108px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+}

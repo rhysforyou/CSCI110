@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hide and seek for div sections</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="styling.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            var shown = '';
+            function hideOnLoad(){
+                divs = document.getElementsByTagName('div');
+                var number = divs.length;
+
+                for(i=0; i < number; i++){
+                    adiv = divs[i];
+                    if(adiv.id!="number1")
+                        {adiv.style.display="none";}
+                }
+                shown = '';
+            }
+            function hideDiv(id) {
+                document.getElementById(id).style.display="none";
+                shown = '';
+            }
+            function showDiv(id) {
+                if(shown!='')
+                    {hideDiv(shown);}
+                document.getElementById(id).style.display="";
+                shown =id;
+            }
+
+        </script>
+    </head>
+    <body onload="hideOnLoad()">
+        <h1> another demo </h1>
+        <div id="number1" >
+            <h2> controlling visibility of DIV sections </h2>
+        </div>
+        <div id="number2" >
+            <h2> altynai asylmuratova </h2>
+        </div>
+        <div id="number3">
+            <h2> Darcey Bussel </h2>
+        </div>
+        <div id="number4">
+            <h2> Dupont </h2>
+        </div>
+        <div id="number5">
+            <h2> Letestu </h2>
+        </div>
+        <table>
+            <tr>
+                <td> <a ondblclick="showDiv('number2')">
+                        <img src="./images3/asylmu06.jpg" alt="Asylmuratova" width="323" height="300" />
+
+                    </a></td>
+                <td> <a ondblclick="showDiv('number3')">
+                        <img src="./images3/buss05.jpg" width="207" height="300" alt="Bussell" />
+
+                    </a></td>
+                    <td> <a ondblclick="showDiv('number4')">
+                        <img src="./images3/dupont05.jpg" width="184" height="300" alt="Dupont" />
+
+                    </a></td>
+                    <td> <a ondblclick="showDiv('number5')">
+                        <img src="./images3/letest06.jpg" width="192" height="300" alt="Letestu" />
+                    </a></td>
+            </tr>
+        </table>
+    </body>
+</html>

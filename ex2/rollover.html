@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="styling.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            choices = new ImageArray(3);
+            choices[1].src = "./images2/sciwords.gif"
+            choices[2].src = "./images2/photowords.gif"
+            choices[3].src = "./images2/rockwords.gif"
+            
+            toyimgon = new Image();
+            toyimgon.src = "./images2/toysB.gif";
+            
+            paintimgon = new Image();
+            paintimgon.src = "./images2/paintsB.gif";
+            
+             toyimgoff = new Image();
+            toyimgoff.src = "./images2/toysA.gif";
+            
+             paintimgoff = new Image();
+            toyimgoff.src = "./images2/paintsA.gif";
+            
+            function ImageArray(n) {
+                this.length = n
+                for (var i = 1; i < n; i++) {
+                    this[i] = new Image()
+                }
+                return this
+            }
+            function chooseText (num) {
+                document.images.text.src = choices[num].src
+            }
+            
+            function resetText() {
+                document.images.text.src = "./images2/home.gif"
+            }
+            
+            function imgOn(imgName){
+                if(document.images){
+                    document[imgName].src = eval(imgName + "on.src");
+                }
+            }
+            
+            function imgOff(imgName){
+                if(document.images){
+                    document[imgName].src = eval(imgName + "off.src");
+                }
+            }            
+        </script>
+    </head>
+    <body>
+        <h1>Roll over demo</h1>
+        <p>
+            the table shown below is really an array of 8 images (3,3,2 by rows)
+            it has five intrapage links three on the top row and two on the bottom 
+        </p>
+        <table border=0 cellpadding=0 cellspacing=0 width=600>
+            <tr>
+                <td valign=bottom align=center>
+                    <a href="#Sci" ONMOUSEOUT="resetText()" ONMOUSEOVER="chooseText(1)">
+                        <img src="./images2/science.gif" border="0" width="180" height="140" alt="Science">
+                    </a>
+                      <a href="#Photo" ONMOUSEOUT="resetText()" ONMOUSEOVER="chooseText(2)">
+                        <img src="./images2/photo.gif" border="0" width="150" height="140" alt="Photo">
+                    </a>
+                     <a href="#Rocks" ONMOUSEOUT="resetText()" ONMOUSEOVER="chooseText(3)">
+                        <img src="./images2/rock.gif" border="0" width="170" height="140" alt="Photo">
+                    </a>
+                </td>
+            </tr> 
+            <tr> 
+                <td valign=bottom align=center>
+                    <img src="./images2/side.gif" width="100" height="180">
+                    <img src="./images2/home.gif" width="300" height="180" name="text">
+                    <img src="./images2/side.gif" width="100" height="180">
+                </td>
+            </tr>
+            <tr>
+                <td valign=bottom align=center>
+                    <a href="#Toys"
+                       onmouseOver="imgOn('toyimg')" onmouseout="imgOff('toying')">
+                        <img src="./images2/toysA.gif" width="250" height="40" name="toyimg">
+                    </a>
+                    <a href="#Paintings" onmouseover="imgOn('paintimg')" onmouseout="imgOff('paintimg')">
+                        <img src="./images2/paintsA.gif" width="250" height="40" name="paintimg">
+                    </a>    
+                </td>
+            </tr>
+        </table>
+        <hr>
+    </body>
+</html>

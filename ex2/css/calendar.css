@@ -1,0 +1,68 @@
+	td.cal{
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #000000;
+	  background-color : #DED5A5;
+	}
+	select.month{
+	  font-family : Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #000000;
+	  width : 85px;
+	}
+	input.year{
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #000000;
+	  width : 30px;
+	}
+	td.calDaysColor {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #DED28E;
+	  background-color : #800000;
+	}
+	td.calWeekend {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #ffffff;
+	  background-color : #DED5A5;
+	}
+	td.calBgColor {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #ffffff;
+	  background-color : #E7DFC1;
+	}
+	.calBorderColor {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #ffffff;
+	  background-color : #826224;
+	}
+	td.calHighlightColor {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #ffffff;
+	  background-color : #FFFFC0;
+	}
+	A.cal {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #000000;
+	  text-decoration : none;
+	}  
+	A.cal:Hover {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+      font-weight : bold;
+	  color : #C00000;
+	  text-decoration : none;
+	} 
+	.disabled {
+	  font-family : Tahoma,Arial,Helvetica,Sans-serif;
+	  font-size : 11px;
+	  color : #808080;
+	  text-decoration : none;
+	}  
+  

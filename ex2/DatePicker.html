@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="STYLESHEET" type="text/css" href="css/main.css">
+<!-- Import components of Lea Smart's calendar -->
+<link rel="STYLESHEET" type="text/css" href="css/calendar.css">
+<script language="JavaScript" src="javascript/simplecalendar.js" type="text/javascript"></script>
+<script language="JavaScript">
+function checkDate()
+{
+	var startingDateStr = theDateForm.startdate.value;
+	var strs = startingDateStr.split(/-/);
+	var year = strs[0];
+	var month = strs[1];
+	var day = strs[2];
+	var startingDate = new Date(year, month-1, day);
+	var endDate = new Date(2008,11,23);
+	/* Day values are numerics measured in milliseconds */
+	var diff = endDate.valueOf() - startingDate.valueOf();
+	diff = diff /(24*60*60*1000);
+	diff = Math.floor(diff);
+	if(diff<5)
+		alert("You won't finish in time if starting " + startingDate.toLocaleDateString());
+	else
+		alert(diff + " days, you might finish in time"); 
+
+}
+
+</script>
+<title>Demonstration of Javascript calendar</title>
+</head>
+<body>
+  <header>
+<h1>When will you begin your Xmas Shopping</h1>
+</header>
+
+			
+<form name="theDateForm" onsubmit="checkDate(); return false" >
+<table align="center">
+	<tr>
+		<th class="FORMTEXT">Day you will start shopping</th>
+		<td><input type="text" name="startdate" size="20" readonly></td>
+		<td width="120">
+		<!-- 
+		function show(event, target, bHasDropDown, dateFormat, dateFrom, dateTo) 
+event - it is the onClick object eventpointer;
+target - this is the name of the form element to receive the date;
+bHasDropDown - is a boolean, true = months are in a dropdown while year is in a text field,
+     false = months and years are both controlled by up and down icons;
+dateFormat - allows for six possible date display formats:
+  'yyyy-mm-dd' displays as 2004-06-23 and works in MySQL
+  'dd-mm-yyyy' displays as 23-06-2004
+  'dd-mmm-yyyy' displays as 23-Jun-2004
+  'mm/dd/yyyy' displays as 06/23/2004
+  'dd/mm/yyyy' displays as 23/06/2004
+  'dd/mmm/yyyy' displays as 23/Jun/2004
+dateFrom - is an optional parameter and sets the start date users can choose from
+  the default is 01/01/1900 and must be specified in Javascript form - new Date(2003, 2, 15)
+  (months start at 0?!)
+dateTo - is also an optional parameter and sets theend date users can choose from
+			-->
+	
+		<a href="javascript: void(0);" 
+			onmouseover="if (timeoutId) clearTimeout(timeoutId);window.status='Show Calendar';return true;" 
+			onmouseout="if (timeoutDelay) calendarTimeout();window.status='';" 
+			onclick="g_Calendar.show(event,'theDateForm.startdate',false, 'yyyy-mm-dd', new Date(2008, 7, 1), new Date(2008,11,23)); return false;">
+			<img src="images/calendar.gif" name="imgCalendar" width="34" height="21" border="0" alt="">
+		</a>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan="3" align="center">
+		<input type="submit" value="How about this?"/>
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
